@@ -1,0 +1,18 @@
+# Учебные проекты и служебные файлы, которые создаёт npm run setup
+*/tracker/
+*/.kit/
+
+# Зависимости и служебные файлы
+node_modules/
+/package-lock.json
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.env
+.env.*
+test-results/
+playwright-report/
+
+# Логи приёмки и временные папки держим вне репозитория
+acceptance/
+tmp/

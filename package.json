@@ -1,0 +1,13 @@
+{
+  "name": "vibecoding-kit",
+  "private": true,
+  "type": "module",
+  "description": "Учебный набор курса «Вайбкодинг» GuideDAO",
+  "license": "MIT",
+  "scripts": {
+    "check": "node -e \"console.log('Автопроверки запускаются в папке практики. Откройте README.md нужной практики, например 04-broken-test/README.md.'); process.exit(1)\""
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
