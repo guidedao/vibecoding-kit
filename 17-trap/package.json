@@ -1,0 +1,10 @@
+{
+  "name": "vibecoding-kit-17-trap",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node setup.mjs",
+    "check": "node checks/check.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

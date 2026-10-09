@@ -1,6 +1,8 @@
 # Учебные проекты и служебные файлы, которые создаёт npm run setup
 */tracker/
+*/journal/
 */.kit/
+17-trap/.trap-path
 
 # Зависимости и служебные файлы
 node_modules/
@@ -10,9 +12,10 @@ npm-debug.log*
 Thumbs.db
 .env
 .env.*
+!tools/fixtures/**/.env.example
 test-results/
 playwright-report/
 
 # Логи приёмки и временные папки держим вне репозитория
-acceptance/
-tmp/
+/acceptance/
+/tmp/

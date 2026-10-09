@@ -1,0 +1,11 @@
+{
+  "name": "streak-cli",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/cli.js data/sample.json",
+    "test": "node --test",
+    "setup-cache": "node scripts/setup-cache.js"
+  }
+}

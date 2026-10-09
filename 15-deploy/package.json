@@ -1,0 +1,10 @@
+{
+  "name": "vibecoding-kit-15-deploy",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "node setup.mjs",
+    "check": "node setup.mjs --hint-check"
+  },
+  "engines": { "node": ">=22" }
+}

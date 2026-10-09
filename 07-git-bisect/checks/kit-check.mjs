@@ -110,7 +110,7 @@ export function createCheck({
       return api;
     },
     async run() {
-      let code = EXIT.NOT_READY;
+      let code;
       if (heading) print([heading, '']);
       try {
         for (const fn of befores) await fn(ctx);
