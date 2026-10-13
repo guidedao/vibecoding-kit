@@ -1,0 +1,9 @@
+weekday,start,duration_min,location,court,coach_email,level,price_per_person,spots
+1,19:00,90,sokol,sokol-1,coach-1@example.com,Новички,1500,4
+2,08:00,60,sokol,sokol-2,coach-2@example.com,Средний,1300,4
+2,20:00,90,nagatino,nagatino-1,coach-1@example.com,Средний,1700,4
+3,19:30,90,sokol,sokol-3,coach-2@example.com,Продвинутые,1900,4
+4,19:00,90,nagatino,nagatino-2,coach-2@example.com,Новички,1500,4
+5,08:00,60,sokol,sokol-1,coach-1@example.com,Новички,1100,4
+6,11:00,90,sokol,sokol-4,coach-1@example.com,Средний,1700,4
+7,12:00,90,nagatino,nagatino-1,coach-2@example.com,Продвинутые,1900,4
