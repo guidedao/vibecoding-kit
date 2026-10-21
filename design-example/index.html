@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Привычки</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="head">
+      <h1>Привычки</h1>
+      <p class="counter">Выполнено 1 из 3</p>
+    </header>
+    <form class="add">
+      <label for="habit-name">Новая привычка</label>
+      <div class="add-row">
+        <input id="habit-name" type="text" placeholder="Например, «Зарядка»">
+        <button type="submit">Добавить</button>
+      </div>
+    </form>
+    <ul class="list">
+      <li class="habit">
+        <label><input type="checkbox" checked><span>Читать 10 минут перед сном</span></label>
+        <button type="button" class="remove" aria-label="Удалить «Читать 10 минут перед сном»">Удалить</button>
+      </li>
+      <li class="habit">
+        <label><input type="checkbox"><span>Зарядка</span></label>
+        <button type="button" class="remove" aria-label="Удалить «Зарядка»">Удалить</button>
+      </li>
+      <li class="habit">
+        <label><input type="checkbox"><span>Стакан воды утром</span></label>
+        <button type="button" class="remove" aria-label="Удалить «Стакан воды утром»">Удалить</button>
+      </li>
+    </ul>
+    <p class="since">С 6 октября · 15 дней подряд</p>
+  </main>
+</body>
+</html>
