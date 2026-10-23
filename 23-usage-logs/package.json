@@ -1,0 +1,9 @@
+{
+  "name": "vibecoding-kit-23-usage-logs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node checks/run.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

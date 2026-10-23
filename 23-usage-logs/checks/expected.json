@@ -1,0 +1,38 @@
+{
+  "logs": {
+    "claude.responses": "64932ff8e49be07d8eeeaf8e4de301ff920c76f7a12643b4040e752952f14c31",
+    "claude.input": "282637cf57efc982799481f38b9f33d1b4758f0e3a95e38b01cbb30fbd9abc1f",
+    "claude.cacheWrite": "fe18e8807bdd86f50d07e552a31bc17f6ec39796bd8e95e3fc59e3f970287a8c",
+    "claude.cacheRead": "f0f7f97ac0f8ccadefdebf4f931a8ff0c1809a9e940e6cf459f237dd1dd9038e",
+    "claude.output": "602213534ca7d35ebd139588ade47da99f487374702b90cb64462699433b49be",
+    "codex.sessions": "fafc374260d6167f6ca487c1bdc0b0bcff7bfcfa9e24a89c2b431d1f475d8827",
+    "codex.input": "3f6a3e9fd479ff346364c3919007e4e1e173bedc63a984b6f41cde438aa2ff30",
+    "codex.cachedInput": "fea24bb9bc0cfe2e51f49546ba900632cc9b76a708853288783d4968809b5160",
+    "codex.output": "cade2843a672237a86386e3bcf8c067db0dee8d47ec2346635e457f84c49a603",
+    "codex.total": "a75fef83a3d9ec41c1957fde17c266c039410cf608dd132ab01518befcb2e2ac"
+  },
+  "a": {
+    "claude.responses": "26b30cc6c4a56ff563d85cfac9bf96b37de747d784e6042a02ef44584b026326",
+    "claude.input": "13fde381a48a76dcb74447d88764da61450c5aaf908465c11ac6f4415f810dfb",
+    "claude.cacheWrite": "a1266252660f2e3a0b08c63ca8da27a1ff254525e54439b06f177dfcc28072f4",
+    "claude.cacheRead": "a651f2fcf65a9ea73b398f6b4339b2c694ad818a9cf60f317934c616421076f6",
+    "claude.output": "e2817b38028fbf93408dcfb83d7170ed9098e1e619beadf76adafc11b1703fb9",
+    "codex.sessions": "143518ecd25bfcb4f1c4c5ae63c040ca70f06d48a72b7e0ddf1ab397a14bb9ab",
+    "codex.input": "e8433952680dda4790ba35b1b69d397bd165f0529f833f57222f1eb5c8bf525e",
+    "codex.cachedInput": "2c2a6578658aea7a84cfb86c652fb8bb0d19f150c6c468aa1ca457bb16e4f3cb",
+    "codex.output": "2ef9f662bc91636d6040736d383f50e62a57222e96ef8893f5bd52876d6296f7",
+    "codex.total": "421a20fd0b5b3d33775579018df76069c1a0ee85c0647e7190dd09a65e8593cc"
+  },
+  "b": {
+    "claude.responses": "24137a3379df425e69f5e45dd33163f407aea33dd1ebfa1f97519a959591b2ce",
+    "claude.input": "8b054c0e417d81137468ea4e3894f970634354d8ccdce91277afd363703666ef",
+    "claude.cacheWrite": "0ff5c8bd088f8b380410ed3908033437548bdb39f4f812dad970dd0df0674035",
+    "claude.cacheRead": "485061a3d3dfe5d4eb997203e0059af1a1a900045f0bff1d6fea2e1f5b832937",
+    "claude.output": "5b1ac81bb15cb99c2aaeb9e082eb9aa7a8eee68081ea66e11442d28c9b1dc065",
+    "codex.sessions": "7fb40332e4d3f7745b52c49196782e76c03d1175972cf0d1102eff0dd6385c2a",
+    "codex.input": "8ef208b0ed8a9d2b1dbe588798806edd43f5e2a075c669738532b6a95b6bc0e6",
+    "codex.cachedInput": "2b0156cfc7f749c66b78c456e45e841fc269652336d71947b87a35599e97395e",
+    "codex.output": "7caa1233a5e8a00d39ba740c58026055b40050dc08ca94efccb38d34315983fc",
+    "codex.total": "890a55e588a8375cfeabe42c242cfc427c1271308295b8a0fd7988a6576756a8"
+  }
+}
