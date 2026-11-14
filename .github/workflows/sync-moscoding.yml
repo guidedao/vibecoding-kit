@@ -1,0 +1,67 @@
+# Копия набора для Moscow Coding School: github.com/moscoding/vibecoding-kit.
+# Ученики школы проходят те же уроки, но платформа ведёт их в копию без имени Guide DAO: связи школ
+# ученики видеть не должны. Копию собирает .github/sync/moscoding_copy.py после каждого пуша в main.
+#
+# Секрет MOSCODING_DEPLOY_KEY — закрытая часть SSH-ключа; открытая добавлена в moscoding/vibecoding-kit →
+# Settings → Deploy keys с правом записи.
+name: Копия для Moscow Coding School
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-moscoding
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'guidedao/vibecoding-kit'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: src
+          fetch-depth: 50
+
+      - name: Клон копии
+        env:
+          DEPLOY_KEY: ${{ secrets.MOSCODING_DEPLOY_KEY }}
+        run: |
+          if [ -z "$DEPLOY_KEY" ]; then
+            echo "::error::Нет секрета MOSCODING_DEPLOY_KEY — копия moscoding/vibecoding-kit не обновится"
+            exit 1
+          fi
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          # Ключ хоста GitHub из его документации, а не ssh-keyscan: так подмену хоста видно сразу.
+          echo "github.com ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOMqqnkVzrm0SdG6UOoqKLsabgH5C9okWi0dh2l9GKJl" > ~/.ssh/known_hosts
+          git clone -q git@github.com:moscoding/vibecoding-kit.git dst
+
+      - name: Сборка копии
+        run: python3 src/.github/sync/moscoding_copy.py src dst
+
+      - name: Коммит и пуш
+        working-directory: dst
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Копия уже совпадает с набором"
+            exit 0
+          fi
+          # Сообщение — заголовки коммитов этого пуша (или последнего коммита при ручном запуске), без имени Guide DAO.
+          if [ -n "$BEFORE" ] && git -C ../src cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            git -C ../src log --reverse --format=%s "$BEFORE..HEAD" > ../subjects
+          else
+            git -C ../src log -1 --format=%s > ../subjects
+          fi
+          python3 ../src/.github/sync/moscoding_copy.py --message < ../subjects > ../message
+          git -c user.name="Moscow Coding School" -c user.email=yo@moscoding.ru commit -q -F ../message
+          git push -q origin HEAD:main
