@@ -26,7 +26,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-KITS = "claude-code-kit|vibecoding-kit|llm-wiki-agent"
+KITS = "claude-code-kit|vibecoding-kit|vibecoding-capstone-starter|llm-wiki-agent"
 # Порядок важен: сначала адреса и составные имена, потом голое имя.
 RULES = [
     # guidedao/<набор> в адресах GitHub, raw.githubusercontent.com, Colab и в тексте.
